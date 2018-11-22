@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Off-canvas Navigation with HTML, CSS, & JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    <body>
+        <!-- Add the off-canvas navigation here -->
+        <header>
+            <div id="mobile-navbar">
+                <a href="#" data-toggle="true" data-toggle-class="nav-active" class="nav-toggle">
+                    <span class="toggle-bar bar-1"></span>
+                    <span class="toggle-bar bar-2"></span>
+                    <span class="toggle-bar bar-3"></span>
+                </a>
+            </div>
+            <div id="nav-bg" data-toggle-class="nav-active">
+                <div id="nav-inner">
+                    <ul id="nav">
+                        <li><a href="#" data-text="Home">Home</a></li>
+                        <li><a href="#" data-text="Services">Services</a></li>
+                        <li><a href="#" data-text="Portfolio">Portfolio</a></li>
+                        <li><a href="#" data-text="Contact">Contact</a></li>
+                        <li class="spacer"></li>
+                        <li class="social-link"><a href="#" data-text="youtube">youtube</a></li>
+                        <li class="social-link"><a href="#" data-text="instagram">instagram</a></li>
+                    </ul>
+                </div>
+                <a href="#" data-toggle="true" data-toggle-class="nav-active" class="nav-toggle">
+                    <span class="toggle-bar bar-1"></span>
+                    <span class="toggle-bar bar-2"></span>
+                    <span class="toggle-bar bar-3"></span>
+                </a>
+            </div>
+        </header>
+        <div id="page-body" data-toggle-class="nav-active">
+            <div class="full-height">
+                <div class="bg-image"></div>
+                <div class="filter"></div>
+                <div class="centered">
+                    <h1>We put the 'www' in awwwesome.</h1>
+                    <br>
+                    <a href="" class="btn">
+                        <span class="btn-bg"></span>
+                        <i class="fas fa-arrow-right"></i>
+                        <span class="btn-text">Learn How</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

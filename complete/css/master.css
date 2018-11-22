@@ -1,0 +1,377 @@
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300rem;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #111111;
+    color:#aaaaaa;
+}
+body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+a * {
+    pointer-events: none;
+}
+h1 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.2rem;
+}
+h1, h4 {
+    font-weight: 300;
+    line-height: 1.1em;
+    margin-bottom: 2rem;
+}
+.italic {
+    font-style: italic;
+}
+.full-height {
+    position: relative;
+    min-height: 100vh;
+    padding: 5rem 0;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.bg-image, .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bg-image {
+    background-image: url('https://images.unsplash.com/photo-1519916340768-6710a9735b10');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.filter {
+    background-color: rgba(0,0,0,.5);
+}
+.centered {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+.centered:after {
+    display: table;
+}
+.centered h1 {
+    text-align: center;
+}
+.key-words span {
+    margin: 0 1rem;
+}
+.btn {
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    color: #aaa;
+    padding-left: 52px;
+}
+.btn, .btn .btn-text, .btn:visited .btn-text, .btn:focus .btn-text, .btn i {
+    position: relative;
+}
+.btn i {
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    font-size: .75rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btn .btn-text {
+    font-size: .875rem;
+    display: inline-block;
+    line-height: 42px;
+    margin: 0 .5rem 0 .25rem;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+.btn .btn-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+.btn:hover .btn-text {
+    margin: 0 1rem 0 -.25rem;
+    color: #fff;
+}
+.btn:hover .btn-bg {
+    width: 100%;
+}
+
+/* Mobile Nav Styles */
+/*======================================================================*/
+/*======================================================================*/
+
+/* Mobile navbar */
+#mobile-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    z-index: 9;
+}
+
+/* Toggle button */
+.nav-toggle, .nav-toggle:focus, .nav-toggle:visited {
+    display: block;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.toggle-bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #aaa;
+    position: absolute;
+    right: 15px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.bar-1 {
+    width: 22px;
+    top: 38%;
+    transform: translate(0, -38%);
+    -webkit-transform: translate(0, -38%);
+    -ms-transform: translate(0, -38%);
+}
+.bar-2 {
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+}
+.bar-3 {
+    width: 16px;
+    top: 62%;
+    transform: translate(0, -62%);
+    -webkit-transform: translate(0, -62%);
+    -ms-transform: translate(0, -62%);
+}
+.toggle-bar:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+}
+.bar-1:before {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.bar-2:before {
+    transition: all 0.3s ease 0.1s;
+    -webkit-transition: all 0.3s ease 0.1s;
+}
+.bar-3:before {
+    transition: all 0.3s ease 0.2s;
+    -webkit-transition: all 0.3s ease 0.2s;
+}
+.nav-toggle:hover .toggle-bar:before {
+    width: 100%;
+}
+
+/* Active button */
+.nav-toggle.nav-active .bar-1, .nav-toggle.nav-active .bar-2 {
+    background-color: #4a4a4a;
+    width: 26px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+    -webkit-transform: translate(0, -50%) rotate(45deg);
+    -ms-transform: translate(0, -50%) rotate(45deg);
+}
+.nav-toggle.nav-active .bar-3 {
+    background-color: #4a4a4a;
+    width: 26px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+    -webkit-transform: translate(0, -50%) rotate(-45deg);
+    -ms-transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* Nav element */
+#nav-bg {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #111;
+    z-index: 10;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+/* #nav-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #111;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+} */
+#nav-inner {
+    padding: 106px 2rem 50px;
+}
+#nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.spacer {
+    height: 32px;
+}
+#nav a, #nav a:visited, #nav a:focus {
+    position: relative;
+    display: inline-block;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 7vh;
+    line-height: 1.1em;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+}
+#nav a:before {
+    content: attr(data-text);
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #aaa;
+    overflow: hidden;
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+}
+#nav .social-link a, #nav .social-link a:focus, #nav .social-link a:visited {
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+#nav a:hover:before {
+    width: 100%;
+}
+
+/* Active nav element */
+#nav-bg.nav-active {
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+}
+/* #nav-bg.nav-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease 0.4s;
+} */
+
+/* Style bonuses to add to the effect */
+#page-body {
+    position: relative;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+#page-body.nav-active {
+    transform: translate(-32%, 0);
+    -webkit-transform: translate(-32%, 0);
+    -ms-transform: translate(-32%, 0);
+}
+
+/*======================================================================*/
+/*======================================================================*/
+
+@media screen and (min-width: 992px) {
+
+    /* Mobile Nav Styles */
+    /*======================================================================*/
+    /*======================================================================*/
+
+    /* Nav element */
+    #nav-bg {
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        transition: all 0.8s ease;
+        -webkit-transition: all 0.8s ease;
+    }
+    /* #nav-bg {
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+    } */
+    #nav-inner {
+        width: 100%;
+        padding: 0 2rem 0 16%;
+    }
+    #nav a, #nav a:visited, #nav a:focus {
+        font-size: 9vh;
+    }
+    #nav a:hover {
+        transform: translate(10px, 0);
+        -webkit-transform: translate(10px, 0);
+        -ms-transform: translate(10px, 0);
+    }
+    #nav .social-link a:hover {
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+    }
+
+    /* Style bonuses to add to the effect */
+    #page-body {
+        transition: all 0.8s ease;
+        -webkit-transition: all 0.8s ease;
+    }
+
+    /*======================================================================*/
+    /*======================================================================*/
+
+}
